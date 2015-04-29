@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <title>Авотзапчасти от Вована</title>
+</head>
+<body>
+<form action="processorder_fopen.php" method="post">
+    <table border="0">
+        <tr bgcolor="#cccccc">
+            <td width="160">Товар</td>
+            <td width="15">Количество</td>
+        </tr>
+        <tr>
+            <td>Покрышки</td>
+            <td align="center"><input type="text" name="tireqty" size="3" maxlength="3" /></td>
+        </tr>
+        <tr>
+            <td>Масло</td>
+            <td align="center"><input type="text" name="oilqty" size="3" maxlength="3" /></td>
+        </tr>
+        <tr>
+            <td>Свечи зажигания</td>
+            <td align="center"><input type="text" name="sparkqty" size="3" maxlength="3" /></td>
+        </tr>
+        <tr>
+            <td>Как вы нашли Вована?</td>
+            <td>
+                <select name="find">
+                    <option value = "a">Я постоянный клиент</option>
+                    <option value = "b">В телевизионной рекламе</option>
+                    <option value = "c">В телефонном справочнике</option>
+                    <option value = "d">Устная рекомнедация</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right"><input type="submit" value="Отправить заказ" /></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

@@ -76,13 +76,7 @@ $find       =   $_POST['find'];
         echo '<p style='.'"color:red"'.'>';
         echo 'На предыдущей странице заказа не было!';
         echo '</p>';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        exit;
-=======
->>>>>>> 2cb326c616dcdf11ad51797659bc1a0227879e22
-=======
->>>>>>> 2cb326c616dcdf11ad51797659bc1a0227879e22
+
     }
 
     if ($tireqty < 10){
@@ -99,50 +93,6 @@ $find       =   $_POST['find'];
     echo '<br />';
     echo '<br />';
     echo '---------------------------------------------------------------------<br />';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    echo 'circle while';
-    $field1 = "Расстояние";
-    $field2 = "Стоимость";
-    echo "<table border=\"0\" cellpadding=\"3\"><tr><td bgcolor=\"#cccccc\" align=\"center\">Расстояние</td>
-    <td bgcolor=\"#cccccc\" align=\"center\">".$field2."</td> </tr>";
-    $distance = 50;
-    while ($distance <= 250){
-        echo "<tr><td align=\"right\">".$distance."</td><td align=\"right\">".($distance/10)."</td></tr>\n";
-        $distance += 50;
-    }
-    echo "</table>";
-
-    echo '<br />'; echo '<br />';
-    echo '---------------------------------------------------------------------<br />';
-    echo 'circle for';
-    $field1 = "Расстояние"; $field2 = "Стоимость";
-    echo "<table border=\"0\" cellpadding=\"3\"><tr><td bgcolor=\"#cccccc\" align=\"center\">".$field1."</td>
-    <td bgcolor=\"#cccccc\" align=\"center\">".$field2."</td> </tr>";
-    for ($distance=50; $distance<=250; $distance+=50 ) {
-        echo "<tr><td align=\"right\">".$distance."</td><td align=\"right\">".($distance/10)."</td></tr>\n";
-    }
-    echo "</table>";
-
-    echo '<br />'; echo '<br />';echo '---------------------------------------------------------------------<br />';echo 'circle do..while';
-    $field1 = "Расстояние"; $field2 = "Стоимость";
-    echo "<table border=\"0\" cellpadding=\"3\"><tr><td bgcolor=\"#cccccc\" align=\"center\">".$field1."</td>
-    <td bgcolor=\"#cccccc\" align=\"center\">".$field2."</td> </tr>";
-    $distance=50;
-    do{
-        echo "<tr><td align=\"right\">".$distance."</td><td align=\"right\">".($distance/10)."</td></tr>\n";
-        $distance+=50;
-    } while ($distance<=250);
-    echo "</table>";
-
-    echo '<br />';
-    echo '<br />';
-    echo '---------------------------------------------------------------------<br />';
-=======
->>>>>>> 2cb326c616dcdf11ad51797659bc1a0227879e22
-=======
->>>>>>> 2cb326c616dcdf11ad51797659bc1a0227879e22
-
     echo 'isset($tireqty): '.isset($tireqty).'<br />';
     echo 'isset($nothere): '.isset($nothere).'<br />';
     echo 'empty($tireqty): '.empty($tireqty).'<br />';

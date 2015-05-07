@@ -11,12 +11,13 @@ $tireqty        =   $_POST['tireqty'];
 $oilqty         =   $_POST['oilqty'];
 $sparkqty       =   $_POST['sparkqty'];
 $find           =   $_POST['find'];
+$address        =   $_POST['address'];
 $DOCUMENT_ROOT  =   $_SERVER['DOCUMENT_ROOT'];
 $date           =   date('H:i, jS F Y');
 ?>
 <html>
 <head>
-    <title>Автозапчасти от Вована - Результаты заказа (head)</title>
+    <title>Автозапчасти от Вована - Результаты заказа (head)(title)</title>
 </head>
 
 <body>
@@ -39,7 +40,6 @@ $date           =   date('H:i, jS F Y');
         echo $date;
         echo '</p>';
         #echo "<p> Заказ обработан в ".date('H:i, jS F Y')."</p>";
-
         echo '<p>Заказано: </p>';
         #echo $tireqty.' покрышек<br />';
         echo "$tireqty покрышек<br />";
@@ -105,6 +105,7 @@ $date           =   date('H:i, jS F Y');
                     "Покрышки (количество): ".$tireqty.";\t".
                     "Бутылок масла (количество): ".$oilqty.";\t".
                     "Свечей зажигания (количество): ".$sparkqty.";\t".
+                    "Адрес: ".$address.";\t".
                     "Сумма: $".number_format($totalamount,2).";\n";
 
     //echo $outputstring.'<br />';

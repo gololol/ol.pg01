@@ -17,7 +17,8 @@ $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     <h2>Просмотр заказов от клиентов</h2>
 
 <?php
-    @ $fp = fopen("$DOCUMENT_ROOT/orders.txt",'rb');
+    $f = $DOCUMENT_ROOT."/ord/orders.txt";
+    @ $fp = fopen($f,'rb');
     if (!$fp){
         echo "<p><strong>Нет обработанных заказов. Загляните позже.</strong></p>";
         exit;
@@ -33,13 +34,26 @@ $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     // использовать функцию fgetc();
     echo "<p>использовать функцию fgetc()</p>";
     echo "<br />";
-    @ $fp = fopen("$DOCUMENT_ROOT/ord/orders.txt",'rb');
+    @ $fp = fopen($f,'rb');
     while (!feof($fp)) {
         $char = fgetc($fp);
         if (!feof($fp)) {
             if($char=="\n"or$char=="\t"){if($char=="\n"){echo "<br /><br />";}else{echo "<br />";}}else{echo $char;}
         }
     }
+    echo "Конечная позиция в указателе файла: ".(ftell($fp));
+    echo "<br />";
+    rewind($fp);
+    echo "Позиция после вызова функции rewind(): ".(ftell($fp));
+    echo '<br />';
+
+    fclose($fp);
+
+
+    echo "<p>использовать функцию fopen(), nl2br(), fread()</p>";
+    echo "<br />";
+    @ $fp = fopen($f, 'rb');
+    echo nl2br(fread($fp, filesize($f)));
     fclose($fp);
 ?>
 </body>

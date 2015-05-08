@@ -33,7 +33,7 @@ $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     // использовать функцию fgetc();
     echo "<p>использовать функцию fgetc()</p>";
     echo "<br />";
-    @ $fp = fopen("$DOCUMENT_ROOT/orders/orders.txt",'rb');
+    @ $fp = fopen("$DOCUMENT_ROOT/orders.txt",'rb');
     while (!feof($fp)) {
         $char = fgetc($fp);
         if (!feof($fp)) {

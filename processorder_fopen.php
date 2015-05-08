@@ -110,7 +110,7 @@ $date           =   date('H:i, jS F Y');
 
     //echo $outputstring.'<br />';
 
-    @ $fp = fopen("$DOCUMENT_ROOT/orders.txt",'ab');
+    @ $fp = fopen("$DOCUMENT_ROOT/ord/orders.txt",'ab');
     if (!$fp){
         echo"<p>В настоящий момент ваш запрос не может быть обработан. "
             ."Пожалуйста, попытайтесь позже.</p></body></html>";

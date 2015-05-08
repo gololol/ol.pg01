@@ -1,6 +1,7 @@
 .idea/
-orders/
 o.txt
+# шаблон order/, order/*.txt - не работает
+orders/
 orders/*.txt
 orders.txt
 

@@ -80,6 +80,11 @@
             $f = $document_root."/".$p1;
             if (file_exists($f)){ echo "Файл: ".$f." существует"; } else {echo "Файл: ".$f." не существует";}
             break;
+        case "implode":
+            $ar = array('path01','path02','path03');
+            $apath = implode("_", $ar);
+            echo "apath: ".$apath."<br />";
+            break;
         default: // введённое значепние неопределено
             echo "p2: ".$p2;
     }

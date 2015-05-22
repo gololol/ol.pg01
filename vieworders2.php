@@ -18,16 +18,9 @@ $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 
 <?php
     $f = $DOCUMENT_ROOT."/ord/orders.txt";
-    $orders = file($f);
 
-    $number_of_orders = count($orders);
-    if ($number_of_orders == 0) {
-        echo "<p><strong>Нет необработанных заказов. Загляните позже.</strong></p>";
-    } else {
-        for ($i = 0; $i < $number_of_orders; $i++) {
-            echo $orders[$i]."<br />";
-        }
-    }
+    // считывание всего файла, каждый заказ становится элементом массива
+    $orders = file($f);
 
     // подсчёт количества заказов, хранящихся в массиве
     $number_of_orders = count($orders);
@@ -50,9 +43,27 @@ $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
         $line = explode("\t", $orders[$i]);
 
         // Сохранение только количества заказанных товаров
-        $line[1] = intval($line[1]);
-        $line[2] = intval($line[2]);
-        $line[3] = intval($line[3]);
+        //$line[1] = intval($line[1]);
+        //$line[2] = intval($line[2]);
+        //$line[3] = intval($line[3]);
+
+        @ $str = $line[1];
+        $str = preg_replace("/[^0-9]/", '', $str);
+        $line[1] = $str;
+
+        @ $str = $line[2];
+        $str = preg_replace("/[^0-9]/", '', $str);
+        $line[2] = $str;
+
+        @ $str = $line[3];
+        $str = preg_replace("/[^0-9]/", '', $str);
+        $line[3] = $str;
+
+        @ $str = $line[4];
+        $line[4] = $str;
+
+        @ $str = $line[5];
+        $line[5] = $str;
 
         // Вывод заказов
         echo "<tr>".
